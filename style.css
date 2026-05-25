@@ -1,0 +1,244 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #1b4332; /* Verde escuro futebol */
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 span {
+    color: #52b788; /* Verde grama claro */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #52b788;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(27, 67, 50, 0.8)), url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #52b788;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #40916c;
+}
+
+/* Seções */
+.section-title {
+    font-size: 2rem;
+    margin: 40px 0 20px;
+    color: #1b4332;
+    border-left: 5px solid #52b788;
+    padding-left: 10px;
+}
+
+/* Cards de Notícias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+}
+
+.news-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagens fictícias usando Unsplash */
+.img-1 { background-image: url('https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); }
+.img-2 { background-image: url('https://images.unsplash.com/photo-1544698310-74ea9d1c8258?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); }
+.img-3 { background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); }
+
+.news-content {
+    padding: 20px;
+}
+
+.news-content .category {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #52b788;
+    font-weight: bold;
+}
+
+.news-content h3 {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #1b4332;
+}
+
+.news-content p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.like-btn:hover {
+    background: #e0e0e0;
+}
+
+/* Tabela de Classificação */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 40px;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+}
+
+th {
+    background-color: #1b4332;
+    color: white;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+/* Cores de destaque para posições */
+.g4 { border-left: 5px solid #2a9d8f; } /* Zona de classificação */
+.z4 { border-left: 5px solid #e76f51; } /* Zona de rebaixamento */
+
+/* Rodapé */
+footer {
+    background-color: #112a20;
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* Responsividade Básica */
+@media(max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 15px;
+    }
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+}
